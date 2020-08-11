@@ -91,3 +91,24 @@ result
 {100: <Response [200]>, 99: <Response [200]>, 98: <Response [200]>, 97: <Response [200]>, 96: <Response [200]>, 95: <Response [200]>, 94: <Response [200]>, 93: <Response [200]>, 92: <Response [200]>, 91: <Response [200]>, 90: <Response [200]>}
 '''
 ```
+
+### misc utils
+ - urlencode / urldecode 
+ - b64encode / b64decode
+ - hexencode / hexdecode
+ - md5, sha1, sha256
+
+
+```python
+print('\n\n[+] misc util test.. url,b64,hex,hash\n')
+string = 'ABCD!@#$'
+print(f'urlencode : {string} - {urlencode(string)}')
+print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string))}')
+print(f'b64encode : {string} - {b64encode(string)}')
+print(f'b64decode : {b64encode(string)} - {b64decode(b64encode(string))}')
+print(f'hexencode : {string} - {hexencode(string)}')
+print(f'hexdecode : {hexencode(string)} - {hexdecode(hexencode(string))}')
+print(f'md5       : {string} - {md5(string)}')
+print(f'sha1      : {string} - {sha1(string)}')
+print(f'sha256    : {string} - {sha256(string)}')
+```
