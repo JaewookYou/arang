@@ -2,6 +2,16 @@
 my own module for webhacking using python3
 
 
+## how to install
+ - pip3 install arang
+ - python3 -m pip install arang
+
+
+## how to update
+ - pip3 install -U arang
+ - python3 -m pip install -U arang
+
+
 ## support functions
 
 ### parsePacket (class)
@@ -40,3 +50,23 @@ pp.redirect = False
 r = pp.post(pp.url,headers=pp.headers,data=pp.data)
 
 print(r.content)```
+
+
+### sequential intruder (like burp func)
+ - parse `\$@#\d+#@\$`(example `$@#100#@$`) form and do intruder from raw packet of fiddler or burpsuite
+ - can choose going up or down
+ - can choose input as hex/decimal number
+ - can save result with specific file
+ - return requests result object by dictionary type
+
+```python
+print('[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
+rr = pp.sequencialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
+print(rr)
+
+print('-====================-')
+
+print('[+] lower intruder test - option="lower", verbose=True')
+rr = pp.sequencialIntruder(rawPacket, to=90, option='lower', verbose=True)
+print(rr)
+```
