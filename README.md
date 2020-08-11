@@ -64,10 +64,18 @@ print(r.content)
 print('[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
 rr = pp.sequencialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
 print(rr)
+'''
+result
+{256: <Response [200]>, 257: <Response [200]>, 258: <Response [200]>, 259: <Response [200]>, 260: <Response [200]>, 261: <Response [200]>, 262: <Response [200]>, 263: <Response [200]>, 264: <Response [200]>, 265: <Response [200]>, 266: <Response [200]>, 267: <Response [200]>, 268: <Response [200]>, 269: <Response [200]>, 270: <Response [200]>, 271: <Response [200]>, 272: <Response [200]>}
+'''
 
 print('-====================-')
 
 print('[+] lower intruder test - option="lower", verbose=True')
 rr = pp.sequencialIntruder(rawPacket, to=90, option='lower', verbose=True)
 print(rr)
+'''
+result
+{100: <Response [200]>, 99: <Response [200]>, 98: <Response [200]>, 97: <Response [200]>, 96: <Response [200]>, 95: <Response [200]>, 94: <Response [200]>, 93: <Response [200]>, 92: <Response [200]>, 91: <Response [200]>, 90: <Response [200]>}
+'''
 ```
