@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: arang
+Version: 0.1
+Summary: my own module for webhacking using python3
+Home-page: https://github.com/JaewookYou/arang
+Author: arang
+Author-email: jwyou@fsec.or.kr
+License: UNKNOWN
+Description: # arang
+        my own module for webhacking using python3
+        
+        
+        ## support functions
+        
+        ### parsePacket (class)
+         - parse raw packet from `fiddler` or `burp suite`
+         - send GET&POST by using `requests.session()` with `pp.*args`
+         - set proxies server
+         - set allow_redirects
+        
+        example code
+        ```python
+        from arang import *
+        
+        rawPacket='''GET http://ar9ang3.com/ HTTP/1.1
+        Host: ar9ang3.com
+        Connection: keep-alive
+        Upgrade-Insecure-Requests: 1
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+        Accept-Encoding: gzip, deflate
+        Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+        
+        
+        '''
+        
+        pp = parsePacket(rawPacket)
+        print('-------parsed packet--------')
+        print('pp.method - {}'.format(pp.method))
+        print('pp.url - {}'.format(pp.url))
+        print('pp.headers - {}'.format(pp.headers))
+        print('pp.data - {}'.format(pp.data))
+        print('----------------------------')
+        
+        pp.setProxy('192.168.20.80:8888')
+        pp.redirect = False
+        
+        r = pp.post(pp.url,headers=pp.headers,data=pp.data)
+        
+        print(r.content)```
+        
+Keywords: arang
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3
+Description-Content-Type: text/markdown
