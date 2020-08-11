@@ -3,7 +3,7 @@ my own module for webhacking using python3
 
 support functions
 
-# parsePacket (class)
+## parsePacket (class)
  - parse raw packet from `fiddler` or `burp suite`
  - send GET&POST by using `requests.session()` with `pp.*args`
  - set proxies server
