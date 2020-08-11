@@ -32,10 +32,23 @@ print(r.content)
 # --- function's definition
 # def sequencialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
 # --- 
-print('[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
+print('\n\n[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
 rr = pp.sequencialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
 print(rr)
 print('-====================-')
 print('[+] lower intruder test - option="lower", verbose=True')
 rr = pp.sequencialIntruder(rawPacket, to=90, option='lower', verbose=True)
 print(rr)
+
+## misc utils
+print('\n\n[+] misc util test.. url,b64,hex,hash\n')
+string = 'ABCD!@#$'
+print(f'urlencode : {string} - {urlencode(string)}')
+print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string))}')
+print(f'b64encode : {string} - {b64encode(string)}')
+print(f'b64decode : {b64encode(string)} - {b64decode(b64encode(string))}')
+print(f'hexencode : {string} - {hexencode(string)}')
+print(f'hexdecode : {hexencode(string)} - {hexdecode(hexencode(string))}')
+print(f'md5       : {string} - {md5(string)}')
+print(f'sha1      : {string} - {sha1(string)}')
+print(f'sha256    : {string} - {sha256(string)}')

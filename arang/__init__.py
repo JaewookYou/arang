@@ -1,13 +1,15 @@
 #-*- coding: utf-8 -*-
 import requests
 import sys
-import urllib
 import time
 import re
 import json
-import arang
+import urllib.parse
+import base64, binascii
+import hashlib
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 
 class parsePacket:
     def __init__(self, packet):
@@ -203,3 +205,75 @@ class parsePacket:
             print('[+] set proxy at {}'.format(host))
 
     
+
+def urlencode(string):
+    if type(string)==bytes:
+        return urllib.parse.quote(string).encode()
+    elif type(string)==str:
+        return urllib.parse.quote(string)
+    else:
+        print('[x] unexpected type')
+        return False
+
+def urldecode(string):
+    if type(string)==bytes:
+        return urllib.parse.unquote(string).encode()
+    elif type(string)==str:
+        return urllib.parse.unquote(string)
+    else:
+        print('[x] unexpected type')
+        return False
+
+def b64encode(string):
+    if type(string)==bytes:
+        return base64.b64encode(string)
+    elif type(string)==str:
+        return base64.b64encode(string.encode()).decode()
+    else:
+        print('[x] unexpected type')
+        return False
+
+def b64decode(string):
+    if type(string)==bytes:
+        return base64.b64decode(string)
+    elif type(string)==str:
+        return base64.b64decode(string.encode()).decode()
+    else:
+        print('[x] unexpected type')
+        return False
+
+def hexencode(string):
+    if type(string)==bytes:
+        return binascii.hexlify(string)
+    elif type(string)==str:
+        return binascii.hexlify(string.encode()).decode()
+    else:
+        print('[x] unexpected type')
+        return False
+
+def hexdecode(string):
+    if type(string)==bytes:
+        return binascii.unhexlify(string)
+    elif type(string)==str:
+        return binascii.unhexlify(string.encode()).decode()
+    else:
+        print('[x] unexpected type')
+        return False
+
+def md5(string):
+    if type(string)==bytes:
+        return hashlib.md5(string).digest()
+    elif type(string)==str:
+        return hashlib.md5(string.encode()).digest()
+
+def sha1(string):
+    if type(string)==bytes:
+        return hashlib.sha1(string).digest()
+    elif type(string)==str:
+        return hashlib.sha1(string.encode()).digest()
+
+def sha256(string):
+    if type(string)==bytes:
+        return hashlib.sha256(string).digest()
+    elif type(string)==str:
+        return hashlib.sha256(string.encode()).digest()
