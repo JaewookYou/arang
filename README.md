@@ -49,7 +49,8 @@ pp.redirect = False
 
 r = pp.post(pp.url,headers=pp.headers,data=pp.data)
 
-print(r.content)```
+print(r.content)
+```
 
 
 ### sequential intruder (like burp func)
