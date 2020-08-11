@@ -2,7 +2,6 @@ README.md
 setup.cfg
 setup.py
 arang/__init__.py
-arang/arang.py
 arang.egg-info/PKG-INFO
 arang.egg-info/SOURCES.txt
 arang.egg-info/dependency_links.txt
