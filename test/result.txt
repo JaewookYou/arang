@@ -1,0 +1,1071 @@
+
+[+] doing - 0
+url - http://ar9ang3.com/?100
+intrude number - 256[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 1
+url - http://ar9ang3.com/?101
+intrude number - 257[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 2
+url - http://ar9ang3.com/?102
+intrude number - 258[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 3
+url - http://ar9ang3.com/?103
+intrude number - 259[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 4
+url - http://ar9ang3.com/?104
+intrude number - 260[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 5
+url - http://ar9ang3.com/?105
+intrude number - 261[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 6
+url - http://ar9ang3.com/?106
+intrude number - 262[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 7
+url - http://ar9ang3.com/?107
+intrude number - 263[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 8
+url - http://ar9ang3.com/?108
+intrude number - 264[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 9
+url - http://ar9ang3.com/?109
+intrude number - 265[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 10
+url - http://ar9ang3.com/?10a
+intrude number - 266[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 11
+url - http://ar9ang3.com/?10b
+intrude number - 267[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 12
+url - http://ar9ang3.com/?10c
+intrude number - 268[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 13
+url - http://ar9ang3.com/?10d
+intrude number - 269[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 14
+url - http://ar9ang3.com/?10e
+intrude number - 270[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 15
+url - http://ar9ang3.com/?10f
+intrude number - 271[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
+
+[+] doing - 16
+url - http://ar9ang3.com/?110
+intrude number - 272[+] response packet<html>
+<head>
+<title>ar9ang3.com</title>
+<script>
+
+//check is mobile
+var filter = "win16|win32|win64|mac|macintel|linux|ubuntu";
+
+if(navigator.platform){
+	if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		isMobile=true;
+	} else {
+		isMobile=false;
+	}
+}
+
+
+function callCat() {
+	var catimg = document.getElementById("catimg");
+	randval = Math.floor(Math.random()*4)+1;
+	catimg.src="/upload/cat"+randval+".jpg";
+
+	if(isMobile){
+		if(randval>0){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+	} else {
+		if(randval>2){
+		catimg.style="height:40%;width:auto;";
+		} else {
+		catimg.style="height:40%;width:auto;-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);";
+		}
+
+	}
+}
+</script>
+</head>
+<body onload=callCat()>
+<center>
+<h1 style="color:#ff3300">Hello arang world!</h1>
+<br>
+<br>
+<img id="catimg" style="height:40%;width:auto;">
+<br>
+<br>
+<br>
+<h3 style="color:#cc4488">World's most cuty cat, dari&#128571;</h3>
+<h2>
+<a href="https://ar9ang3.tistory.com/1" style="color:#aa88cc">whoami?</a><br>
+<a href="https://ar9ang3.tistory.com/" style="color:#aa88cc">blog</a><br>
+<a href="https://defenit.kr/" style="color:#aa88cc">Defenit Team Blog</a><br>
+</h2>
+</center>
+</body>
+</html>
+
+
+
