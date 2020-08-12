@@ -28,16 +28,16 @@ pp.timeout = 30
 r = pp.post(pp.url,headers=pp.headers,data=pp.data)
 print(r.content)
 
-## sequencial intruder like burp's function
+## sequential intruder like burp's function
 # --- function's definition
-# def sequencialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
+# def sequentialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
 # --- 
 print('\n\n[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
-rr = pp.sequencialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
+rr = pp.sequentialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
 print(rr)
 print('-====================-')
 print('[+] lower intruder test - option="lower", verbose=True')
-rr = pp.sequencialIntruder(rawPacket, to=90, option='lower', verbose=True)
+rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', verbose=True)
 print(rr)
 
 ## misc utils

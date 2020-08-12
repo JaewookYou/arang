@@ -7,6 +7,7 @@ import json
 import urllib.parse
 import base64, binascii
 import hashlib
+from concurrent.futures import ThreadPoolExecutor
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -50,11 +51,11 @@ class parsePacket:
             key = line.split(':')[0].strip()
             data = line.split(':')[1].strip()
             self.headers[key] = data
-        #print(re.sub('\d{4}', 'XXXX', '010-1234-5678'))
+        
     
     ## function like burpsuite's intruder
     # default setting value is configured by upper & verbose
-    def sequencialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
+    def sequentialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
         if '$@#' not in packet and '#@$' not in packet:
             print('[x] intruder params is not set')
             return
@@ -66,9 +67,9 @@ class parsePacket:
 
         if not self.silent:
             if hexed:
-                print('[+] doing sequencial intruder from {} to {}'.format(hex(int(originNum,16)), hex(to)))
+                print('[+] doing sequential intruder from {} to {}'.format(hex(int(originNum,16)), hex(to)))
             else:
-                print('[+] doing sequencial intruder from {} to {}'.format(originNum, to))
+                print('[+] doing sequential intruder from {} to {}'.format(originNum, to))
 
         try:
             if hexed:
@@ -80,7 +81,7 @@ class parsePacket:
             else:
                 originNum = int(originNum)
         except ValueError:
-            print('[x] please set `int type` parameter to use sequencial intruder')
+            print('[x] please set `int type` parameter to use sequential intruder')
             return
         except:
             print('[x] sorry.. unexpected error')
