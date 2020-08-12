@@ -74,7 +74,7 @@ Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
 '''
 
 print('[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
-rr = pp.sequencialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
+rr = pp.sequentialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
 print(rr)
 '''
 result
@@ -84,7 +84,7 @@ result
 print('-====================-')
 
 print('[+] lower intruder test - option="lower", verbose=True')
-rr = pp.sequencialIntruder(rawPacket, to=90, option='lower', verbose=True)
+rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', verbose=True)
 print(rr)
 '''
 result
