@@ -112,3 +112,18 @@ print(f'md5       : {string} - {md5(string)}')
 print(f'sha1      : {string} - {sha1(string)}')
 print(f'sha256    : {string} - {sha256(string)}')
 ```
+
+## to-do-list
+
+1. support threadpoolexecutor at intruder for increasing exploit speed
+
+2. implement oob helper (idea from [Zach Wade](https://twitter.com/zwad3))
+3. implement `request smuggling` helper(or tool)
+
+
+
+## License
+
+Copyright (C) Jaewook You(arang) (jaewook376 at naver dot com)
+
+License: GNU General Public License, version 2
