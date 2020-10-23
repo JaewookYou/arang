@@ -59,6 +59,7 @@ print(r.content)
  - can choose input as hex/decimal number
  - can save result with specific file
  - return requests result object by dictionary type
+ - find some string value at response content & print it
 
 ```python
 rawPacket='''GET http://ar9ang3.com/?$@#100#@$ HTTP/1.1
