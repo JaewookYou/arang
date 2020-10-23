@@ -38,7 +38,7 @@ class parsePacket:
             self.url = lines[0].split(' ')[1]
         # but burp isn't including that, so parse host header to make url
         else:
-            self.url = self.parseBurpUrl(packet) + lines[0].split(' ')[1]
+            self.url = 'http://' + self.parseBurpUrl(packet) + lines[0].split(' ')[1]
         
         ## parse headers
         if '\n\n' in packet:
@@ -55,7 +55,7 @@ class parsePacket:
     
     ## function like burpsuite's intruder
     # default setting value is configured by upper & verbose
-    def sequentialIntruder(self, packet, to=None, option='upper', hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
+    def sequentialIntruder(self, packet, to=None, option='upper', find=None, hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
         if '$@#' not in packet and '#@$' not in packet:
             print('[x] intruder params is not set')
             return
@@ -130,6 +130,15 @@ class parsePacket:
                         f.write(resultSaveContent.encode())
 
                 cnt += 1
+                if find:
+                    if type(find) == str:
+                        find = find.encode()
+                    if find in r.content:
+                        print('[!] {} find value - {}'.format(intrudeNum, find))
+                        for x in r.content.split(b'\n'):
+                            if find in x:
+                                print(f'--> {x}')
+                        print('-------------------------')
                 result[intrudeNum] = r
 
             elif self.method.upper() == 'POST':
@@ -218,7 +227,10 @@ def urlencode(string):
 
 def urldecode(string):
     if type(string)==bytes:
-        return urllib.parse.unquote(string).encode()
+        try:
+            return urllib.parse.unquote(string.decode()).encode()
+        except:
+            return urllib.parse.unquote(string)
     elif type(string)==str:
         return urllib.parse.unquote(string)
     else:
@@ -256,7 +268,10 @@ def hexdecode(string):
     if type(string)==bytes:
         return binascii.unhexlify(string)
     elif type(string)==str:
-        return binascii.unhexlify(string.encode()).decode()
+        try:
+            return binascii.unhexlify(string.encode()).decode()
+        except:
+            return binascii.unhexlify(string)
     else:
         print('[x] unexpected type')
         return False

@@ -20,7 +20,7 @@ print('pp.headers - {}'.format(pp.headers))
 print('pp.data - {}'.format(pp.data))
 print('----------------------------')
 
-pp.setProxy('192.168.20.80:8888')
+#pp.setProxy('192.168.20.80:8888')
 pp.redirect = False
 pp.silent = False
 pp.timeout = 30
@@ -36,8 +36,8 @@ print('\n\n[+] upper intruder test - hexed=True, verbose=False, showContent=Fals
 rr = pp.sequentialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
 print(rr)
 print('-====================-')
-print('[+] lower intruder test - option="lower", verbose=True')
-rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', verbose=True)
+print('[+] lower intruder test - option="lower", verbose=True, find="arang"')
+rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', find="arang", verbose=True)
 print(rr)
 
 ## misc utils

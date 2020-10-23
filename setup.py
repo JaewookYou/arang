@@ -18,6 +18,7 @@ setup(
     package_data        = {},
     zip_safe            = False,
     classifiers         = [
+        'License :: OSI Approved :: MIT License'
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.1',
         'Programming Language :: Python :: 3.2',
