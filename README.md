@@ -84,7 +84,7 @@ result
 
 print('-====================-')
 
-print('[+] lower intruder test - option="lower", verbose=True')
+print('[+] lower intruder test - option="lower", find="arang", verbose=True')
 rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', verbose=True)
 print(rr)
 '''
