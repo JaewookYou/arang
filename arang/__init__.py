@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
+def test():
+    print('for test')
 
 class parsePacket:
     def __init__(self, packet):
@@ -55,7 +57,7 @@ class parsePacket:
     
     ## function like burpsuite's intruder
     # default setting value is configured by upper & verbose
-    def sequentialIntruder(self, packet, to=None, option='upper', find=None, hexed=False, verbose=True, showContent=False, resultSaveWithFile=False):
+    def sequentialIntruder(self, packet, to=None, option='upper', find=None, hexed=False, verbose=True, showContent=False, resultSaveWithFile=False, thread=0):
         if '$@#' not in packet and '#@$' not in packet:
             print('[x] intruder params is not set')
             return
@@ -93,6 +95,12 @@ class parsePacket:
         if resultSaveWithFile:
             with open(resultSaveWithFile, 'wb') as f:
                 f.write(b'')
+
+        # if thread > 0:
+        #     target = [x for x in range(originNum, to+1 if option.lower()=='upper' else to-1, 1 if option.lower()=='upper' else -1)]
+        #     with ThreadPoolExecutor(thread) as pool:
+        #         ret = [x for x in pool.map(check, target)]
+        #     cnt += 1
 
         for intrudeNum in range(originNum, to+1 if option.lower()=='upper' else to-1, 1 if option.lower()=='upper' else -1):
             if self.method.upper() == 'GET':
@@ -214,25 +222,41 @@ class parsePacket:
         if not self.silent:
             print('[+] set proxy at {}'.format(host))
 
-    
+def ue(string, enc='utf-8'):
+    return urlencode(string, enc=enc)
 
-def urlencode(string):
+def ud(string, enc='utf-8'):
+    return urldecode(string, enc=enc)
+
+def be(string):
+    return b64encode(string)
+
+def bd(string):
+    return b64decode(string)
+
+def he(string):
+    return hexencode(string)
+
+def hd(string):
+    return hexdecode(string)    
+
+def urlencode(string, enc='utf-8'):
     if type(string)==bytes:
-        return urllib.parse.quote(string).encode()
+        return urllib.parse.quote(string.decode(enc), encoding=enc)
     elif type(string)==str:
-        return urllib.parse.quote(string)
+        return urllib.parse.quote(string, encoding=enc)
     else:
         print('[x] unexpected type')
         return False
 
-def urldecode(string):
+def urldecode(string, enc='utf-8'):
     if type(string)==bytes:
         try:
-            return urllib.parse.unquote(string.decode()).encode()
+            return urllib.parse.unquote(string.decode('latin-1'), encoding=enc)
         except:
-            return urllib.parse.unquote(string)
+            return urllib.parse.unquote(string, encoding=enc)
     elif type(string)==str:
-        return urllib.parse.unquote(string)
+        return urllib.parse.unquote(string, encoding=enc)
     else:
         print('[x] unexpected type')
         return False
@@ -241,7 +265,7 @@ def b64encode(string):
     if type(string)==bytes:
         return base64.b64encode(string)
     elif type(string)==str:
-        return base64.b64encode(string.encode()).decode()
+        return base64.b64encode(string.encode('latin-1')).decode('latin-1')
     else:
         print('[x] unexpected type')
         return False
@@ -250,7 +274,7 @@ def b64decode(string):
     if type(string)==bytes:
         return base64.b64decode(string)
     elif type(string)==str:
-        return base64.b64decode(string.encode()).decode()
+        return base64.b64decode(string.encode('latin-1')).decode('latin-1')
     else:
         print('[x] unexpected type')
         return False
@@ -259,7 +283,7 @@ def hexencode(string):
     if type(string)==bytes:
         return binascii.hexlify(string)
     elif type(string)==str:
-        return binascii.hexlify(string.encode()).decode()
+        return binascii.hexlify(string.encode('latin-1')).decode('latin-1')
     else:
         print('[x] unexpected type')
         return False
@@ -269,7 +293,7 @@ def hexdecode(string):
         return binascii.unhexlify(string)
     elif type(string)==str:
         try:
-            return binascii.unhexlify(string.encode()).decode()
+            return binascii.unhexlify(string.encode('latin-1')).decode('latin-1')
         except:
             return binascii.unhexlify(string)
     else:
