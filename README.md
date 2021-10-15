@@ -94,9 +94,9 @@ result
 ```
 
 ### misc utils
- - urlencode / urldecode 
- - b64encode / b64decode
- - hexencode / hexdecode
+ - urlencode / urldecode / ue / ud
+ - b64encode / b64decode / be / bd
+ - hexencode / hexdecode / he / hd
  - md5, sha1, sha256
 
 
@@ -104,7 +104,9 @@ result
 print('\n\n[+] misc util test.. url,b64,hex,hash\n')
 string = 'ABCD!@#$'
 print(f'urlencode : {string} - {urlencode(string)}')
+print(f'urlencode : {string} - {urlencode(string, enc='cp949')}')
 print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string))}')
+print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string, enc='cp949'), enc='cp949')}')
 print(f'b64encode : {string} - {b64encode(string)}')
 print(f'b64decode : {b64encode(string)} - {b64decode(b64encode(string))}')
 print(f'hexencode : {string} - {hexencode(string)}')
@@ -119,8 +121,16 @@ print(f'sha256    : {string} - {sha256(string)}')
 1. support threadpoolexecutor at intruder for increasing exploit speed
 2. implement oob helper with simple webserver (idea from [Zach Wade](https://twitter.com/zwad3))
 3. implement `request smuggling` helper(or tool)
+4. implement automating blind sql injection
 
+## WHAT'S NEW?
 
+#2021-10-15
+```
+- fix string encoding issue with url,base64,hex encode/decode functions
+- add short version of encode/decode functions
+- support user defined encoding with urlencode/urldecode functions 
+```
 
 ## License
 

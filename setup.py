@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name                = 'arang',
-    version             = '0.7',
+    version             = '0.8',
     description         = 'my own module for webhacking using python3',
     long_description	= long_description,
     long_description_content_type	= "text/markdown",
@@ -18,7 +18,7 @@ setup(
     package_data        = {},
     zip_safe            = False,
     classifiers         = [
-        'License :: OSI Approved :: MIT License'
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.1',
         'Programming Language :: Python :: 3.2',
@@ -28,5 +28,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
 )
