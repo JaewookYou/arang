@@ -2,6 +2,7 @@ dist/
 build/
 test/
 arang.egg-info/
+*.sh
 *.pyc
 *.cfg
 ./test.py

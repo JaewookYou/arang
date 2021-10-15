@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name                = 'arang',
-    version             = '0.8',
+    version             = '1.0',
     description         = 'my own module for webhacking using python3',
     long_description	= long_description,
     long_description_content_type	= "text/markdown",
