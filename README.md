@@ -1,139 +1,297 @@
 # arang
-my own module for webhacking using python3
 
+Python module for web hacking and security testing.
 
-## how to install
- - pip3 install arang
- - python3 -m pip install arang
+## Installation
 
+```bash
+pip install arang
+# or
+python -m pip install arang
+```
 
-## how to update
- - pip3 install -U arang
- - python3 -m pip install -U arang
+### With SEED crypto support (optional)
 
+```bash
+pip install arang[seed]
+```
 
-## support functions
+## Update
+
+```bash
+pip install -U arang
+# or
+python -m pip install -U arang
+```
+
+## Requirements
+
+- Python 3.8 ~ 3.13
+- requests
+- pycryptodome
+- pyperclip
+
+---
+
+## Features
 
 ### parsePacket (class)
- - parse raw packet from `fiddler` or `burp suite`
- - send GET&POST by using `requests.session()` with `pp.*args`
- - set proxies server
- - set allow_redirects
 
-example code
+Parse raw HTTP packets from Fiddler or Burp Suite and send requests.
+
 ```python
 from arang import *
 
-rawPacket='''GET http://ar9ang3.com/ HTTP/1.1
-Host: ar9ang3.com
+rawPacket = '''GET http://example.com/ HTTP/1.1
+Host: example.com
 Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate
-Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
-
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 '''
 
 pp = parsePacket(rawPacket)
-print('-------parsed packet--------')
-print('pp.method - {}'.format(pp.method))
-print('pp.url - {}'.format(pp.url))
-print('pp.headers - {}'.format(pp.headers))
-print('pp.data - {}'.format(pp.data))
-print('----------------------------')
+print('Method:', pp.method)
+print('URL:', pp.url)
+print('Headers:', pp.headers)
+print('Data:', pp.data)
 
-pp.setProxy('192.168.20.80:8888')
+# Configure options
+pp.setProxy('127.0.0.1:8080')
 pp.redirect = False
+pp.silent = True
+pp.timeout = 30
 
-r = pp.post(pp.url,headers=pp.headers,data=pp.data)
-
+# Send request
+r = pp.get(pp.url, headers=pp.headers)
 print(r.content)
 ```
 
+---
 
-### sequential intruder (like burp func)
- - parse `\$@#\d+#@\$`(example `$@#100#@$`) form and do intruder from raw packet of fiddler or burpsuite
- - can choose going up or down
- - can choose input as hex/decimal number
- - can save result with specific file
- - return requests result object by dictionary type
- - find some string value at response content & print it
+### Sequential Intruder (like Burp Suite)
+
+Use `$@#<number>#@$` pattern to iterate through values:
 
 ```python
-rawPacket='''GET http://ar9ang3.com/?$@#100#@$ HTTP/1.1
-Host: ar9ang3.com
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate
-Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+from arang import *
 
+rawPacket = '''GET http://example.com/?id=$@#100#@$ HTTP/1.1
+Host: example.com
 
 '''
 
-print('[+] upper intruder test - hexed=True, verbose=False, showContent=False, resultSaveWithFile="result.txt"')
-rr = pp.sequentialIntruder(rawPacket, to=0x110, option='upper', hexed=True, verbose=False, showContent=False, resultSaveWithFile='result.txt')
-print(rr)
-'''
-result
-{256: <Response [200]>, 257: <Response [200]>, 258: <Response [200]>, 259: <Response [200]>, 260: <Response [200]>, 261: <Response [200]>, 262: <Response [200]>, 263: <Response [200]>, 264: <Response [200]>, 265: <Response [200]>, 266: <Response [200]>, 267: <Response [200]>, 268: <Response [200]>, 269: <Response [200]>, 270: <Response [200]>, 271: <Response [200]>, 272: <Response [200]>}
-'''
+pp = parsePacket(rawPacket)
 
-print('-====================-')
+# Count up from 100 to 272 (hex 0x110)
+results = pp.sequentialIntruder(
+    rawPacket, 
+    to=0x110, 
+    option='upper',      # 'upper' or 'lower'
+    hexed=True,          # Use hex numbers
+    verbose=False,
+    showContent=False,
+    resultSaveWithFile='result.txt'
+)
 
-print('[+] lower intruder test - option="lower", find="arang", verbose=True')
-rr = pp.sequentialIntruder(rawPacket, to=90, option='lower', verbose=True)
-print(rr)
-'''
-result
-{100: <Response [200]>, 99: <Response [200]>, 98: <Response [200]>, 97: <Response [200]>, 96: <Response [200]>, 95: <Response [200]>, 94: <Response [200]>, 93: <Response [200]>, 92: <Response [200]>, 91: <Response [200]>, 90: <Response [200]>}
-'''
+# Count down from 100 to 90, find specific string
+results = pp.sequentialIntruder(
+    rawPacket, 
+    to=90, 
+    option='lower',
+    find='target_string',
+    verbose=True
+)
 ```
 
-### misc utils
- - urlencode / urldecode / ue / ud
- - b64encode / b64decode / be / bd
- - hexencode / hexdecode / he / hd
- - md5, sha1, sha256
+---
 
+### Clipboard (pp function)
+
+Copy text to clipboard. Supports both `str` and `bytes`:
 
 ```python
-print('\n\n[+] misc util test.. url,b64,hex,hash\n')
-string = 'ABCD!@#$'
-print(f'urlencode : {string} - {urlencode(string)}')
-print(f'urlencode : {string} - {urlencode(string, enc='cp949')}')
-print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string))}')
-print(f'urldecode : {urlencode(string)} - {urldecode(urlencode(string, enc='cp949'), enc='cp949')}')
-print(f'b64encode : {string} - {b64encode(string)}')
-print(f'b64decode : {b64encode(string)} - {b64decode(b64encode(string))}')
-print(f'hexencode : {string} - {hexencode(string)}')
-print(f'hexdecode : {hexencode(string)} - {hexdecode(hexencode(string))}')
-print(f'md5       : {string} - {md5(string)}')
-print(f'sha1      : {string} - {sha1(string)}')
-print(f'sha256    : {string} - {sha256(string)}')
+from arang import pp
+
+# Copy string
+pp("Hello, World!")
+
+# Copy bytes (auto-converted to string)
+pp(b"Hello bytes")
+
+# With custom encoding for Korean text
+pp(b"\xed\x95\x9c\xea\xb8\x80", encoding='utf-8')
 ```
 
-## to-do-list
+---
 
-1. support threadpoolexecutor at intruder for increasing exploit speed
-2. implement oob helper with simple webserver (idea from [Zach Wade](https://twitter.com/zwad3))
-3. implement `request smuggling` helper(or tool)
-4. implement automating blind sql injection
+### Encoding / Decoding
 
-## WHAT'S NEW?
+URL, Base64, and Hex encoding with short aliases:
 
-#2021-10-15
+```python
+from arang import *
+
+# URL encoding
+urlencode('hello world')       # 'hello%20world'
+urldecode('hello%20world')     # 'hello world'
+ue('한글', enc='utf-8')        # URL encode Korean
+ud('%ED%95%9C%EA%B8%80')       # URL decode
+
+# Base64
+b64encode('hello')             # 'aGVsbG8='
+b64decode('aGVsbG8=')          # 'hello'
+be(b'bytes')                   # Short alias
+bd('aGVsbG8=')                 # Short alias
+
+# Hex
+hexencode('AB')                # '4142'
+hexdecode('4142')              # 'AB'
+he(b'data')                    # Short alias
+hd('64617461')                 # Short alias
 ```
-- fix string encoding issue with url,base64,hex encode/decode functions
-- add short version of encode/decode functions
-- support user defined encoding with urlencode/urldecode functions 
+
+---
+
+### Hashing
+
+MD5, SHA1, SHA256, SHA512 with optional hex output:
+
+```python
+from arang import *
+
+# Returns bytes by default
+md5('hello')                   # b'\x5d\x41...'
+sha1('hello')
+sha256('hello')
+sha512('hello')
+
+# Get hex string
+md5('hello', hex_digest=True)  # '5d41402abc4b2a76b9719d911017c592'
+sha256(b'bytes', hex_digest=True)
 ```
+
+---
+
+### Cryptography (AES)
+
+Easy AES encryption/decryption with helpful error messages:
+
+```python
+from arang.crypto import aes
+
+key = b'0123456789abcdef'  # 16/24/32 bytes
+iv = b'abcdef0123456789'   # 16 bytes
+
+# Encrypt (supports str and bytes)
+encrypted = aes.enc(key, iv, b'Hello, World!')
+encrypted = aes.enc(key, iv, 'String also works')
+
+# Decrypt
+decrypted = aes.dec(key, iv, encrypted)
+print(decrypted)  # b'Hello, World!'
+
+# Different modes: CBC (default), ECB, CFB, OFB, CTR
+encrypted = aes.enc(key, iv, data, mode='CTR')
+encrypted = aes.enc(key, None, data, mode='ECB')  # ECB doesn't need IV
+
+# Without padding
+encrypted = aes.enc(key, iv, padded_data, padding=False)
+```
+
+**Error messages include usage hints:**
+```
+[x] key must be 16, 24, or 32 bytes, got 10 bytes
+
+Usage: aes.enc(key, iv, data, mode='CBC', padding=True)
+       aes.dec(key, iv, data, mode='CBC', padding=True)
+
+Parameters:
+  - key: 16/24/32 bytes (AES-128/192/256)
+  - iv: 16 bytes (required for CBC, CFB, OFB, CTR modes)
+  - data: bytes
+  - mode: 'CBC', 'ECB', 'CFB', 'OFB', 'CTR' (default: 'CBC')
+```
+
+---
+
+### Cryptography (SEED)
+
+SEED encryption (Korean standard TTAS.KO-12.0004/R1):
+
+```python
+from arang.crypto import seed
+
+key = b'0123456789abcdef'  # 16 bytes only
+iv = b'abcdef0123456789'   # 16 bytes
+
+# Encrypt
+encrypted = seed.enc(key, iv, b'Hello, World!')
+
+# Decrypt
+decrypted = seed.dec(key, iv, encrypted)
+print(decrypted)  # b'Hello, World!'
+
+# Without padding
+encrypted = seed.enc(key, iv, padded_data, padding=False)
+```
+
+> **Note:** Install `kisa-seed` for better performance: `pip install kisa-seed`
+
+---
+
+## Quick Reference
+
+| Function | Short | Description |
+|----------|-------|-------------|
+| `urlencode(s)` | `ue(s)` | URL encode |
+| `urldecode(s)` | `ud(s)` | URL decode |
+| `b64encode(s)` | `be(s)` | Base64 encode |
+| `b64decode(s)` | `bd(s)` | Base64 decode |
+| `hexencode(s)` | `he(s)` | Hex encode |
+| `hexdecode(s)` | `hd(s)` | Hex decode |
+| `md5(s)` | - | MD5 hash |
+| `sha1(s)` | - | SHA1 hash |
+| `sha256(s)` | - | SHA256 hash |
+| `sha512(s)` | - | SHA512 hash |
+| `pp(s)` | - | Copy to clipboard |
+| `aes.enc(k, iv, d)` | - | AES encrypt |
+| `aes.dec(k, iv, d)` | - | AES decrypt |
+| `seed.enc(k, iv, d)` | - | SEED encrypt |
+| `seed.dec(k, iv, d)` | - | SEED decrypt |
+
+---
+
+## To-Do List
+
+- [ ] Support ThreadPoolExecutor in intruder for faster exploitation
+- [ ] OOB helper with simple webserver (idea from [Zach Wade](https://twitter.com/zwad3))
+- [ ] Request smuggling helper
+- [ ] Automated blind SQL injection
+
+---
+
+## What's New?
+
+### v2.0.0 (2025-01-16)
+- Complete code refactoring into modular structure
+- Python 3.8 ~ 3.13 support
+- Added `pp()` clipboard function with bytes/str support
+- Added `aes` crypto module with multiple modes and helpful errors
+- Added `seed` crypto module (Korean standard) with pure Python fallback
+- Added `sha512` hash function
+- Added `hex_digest` option to hash functions
+- Improved type hints and docstrings
+- Cleaned up dependencies
+
+### v1.0 (2021-10-15)
+- Fix string encoding issue with url, base64, hex encode/decode functions
+- Add short version of encode/decode functions
+- Support user defined encoding with urlencode/urldecode functions
+
+---
 
 ## License
 
-Copyright (C) Jaewook You(arang) (jaewook376 at naver dot com)
+Copyright (C) Jaewook You (arang) (jaewook376 at naver dot com)
 
 License: GNU General Public License, version 2
